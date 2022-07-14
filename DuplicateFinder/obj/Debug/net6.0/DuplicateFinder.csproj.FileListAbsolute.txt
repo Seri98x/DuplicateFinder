@@ -1,0 +1,15 @@
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\net6.0\DuplicateFinder.exe
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\net6.0\DuplicateFinder.deps.json
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\net6.0\DuplicateFinder.runtimeconfig.json
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\net6.0\DuplicateFinder.dll
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\net6.0\DuplicateFinder.pdb
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.csproj.AssemblyReference.cache
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.AssemblyInfoInputs.cache
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.AssemblyInfo.cs
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.csproj.CoreCompileInputs.cache
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.dll
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\refint\DuplicateFinder.dll
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.pdb
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\DuplicateFinder.genruntimeconfig.cache
+C:\Users\TwinPeaks\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\net6.0\ref\DuplicateFinder.dll
