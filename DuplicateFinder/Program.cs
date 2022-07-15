@@ -4,6 +4,7 @@ public class DuplicateFinder
     static List<string> cards = new List<string>();
     static List<string> duplicards = new List<string>();
     static List<string> filteredcards = new List<string>();
+    static List<string> cvvlist = new List<string>();
     static string InputCardsFP = "C:\\Duplicator\\InputCards.txt";
     static string DuplicateCardsFP = "C:\\Duplicator\\DuplicateCards.txt";
     static string UniqueCardsFP = "C:\\Duplicator\\UniqueCardsFP.txt";
@@ -32,9 +33,6 @@ public class DuplicateFinder
             isCreated = true;
         }
 
-      
-
-
          if (isCreated && !isFirstTime)
         {
             string cardnum = string.Empty;
@@ -44,7 +42,7 @@ public class DuplicateFinder
             {
                 while ((duplicard = sr.ReadLine()) != null)
                 {
-                    duplicards.Add(duplicard.Split('|')[0] + duplicard.Split('|')[3]);
+                    duplicards.Add(duplicard);
 
                 }
                 sr.Close();
@@ -56,10 +54,12 @@ public class DuplicateFinder
                 Console.WriteLine("-----Input Cards-----");
                 while ((cardnum = sr.ReadLine()) != null)
                 {
-                    if (!duplicards.Contains(cardnum.Split('|')[0] + cardnum.Split('|')[3]))
+                    if (!duplicards.Contains(cardnum.Split('|')[0] +"|"+ cardnum.Split('|')[1] + "|"+cardnum.Split('|')[2]))
                     {
                         Console.WriteLine(cardnum);
-                        cards.Add(cardnum);
+                        cvvlist.Add(cardnum.Split('|')[3]);
+                        cards.Add(cardnum.Split('|')[0] + "|" + cardnum.Split('|')[1] + "|" + cardnum.Split('|')[2]);
+                        
                     }
                     else
                     {
@@ -69,30 +69,29 @@ public class DuplicateFinder
 
                 }
                 Console.WriteLine($"----------\nNumber of duplicated cards {duplicatedCards}");
-                Console.WriteLine("----------\n© TEK Softwares 2022");
+                Console.WriteLine("----------\n DupliCheck © TEK Softwares 2022");
                 Console.WriteLine("----------\nWait ilagay lang sa notepad saglit");
                 sr.Close();
             }
-
+            var uniqueInitial = cards.Distinct().ToList();
             using (StreamWriter sw = new StreamWriter(DuplicateCardsFP, true))
             {
-                foreach (string cards in cards)
+                foreach (string uniques in uniqueInitial)
                 {
-
-                    if (!duplicards.Contains(cards.Split('|')[0] + cards.Split('|')[3]))
+                    if (!duplicards.Contains(uniques))
                     {
-                        sw.WriteLine(cards);
-                        filteredcards.Add(cards);
+                        sw.WriteLine(uniques);
+                        filteredcards.Add(uniques);
                     }
                 }
                 sw.Close();
             }
-
             using (StreamWriter sw = new StreamWriter(UniqueCardsFP, true))
             {
-                foreach (string filteredcards in filteredcards)
+
+                for(int i=0; i<filteredcards.Count; i++)
                 {
-                    sw.WriteLine(filteredcards);
+                    sw.WriteLine(filteredcards[i] + "|" + cvvlist[i]);
                 }
                 sw.Close();
             }
